@@ -1,6 +1,7 @@
 package model;
 
 public class Carro {
+    private Integer id;
     private String marca;
     private String modelo;
     private Integer anoFabricacao;
@@ -8,10 +9,19 @@ public class Carro {
     public Carro() {
     }
 
-    public Carro(String marca, String modelo, Integer anoFabricacao) {
+    public Carro(Integer id, String marca, String modelo, Integer anoFabricacao) {
+        this.id = id;
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getMarca() {
@@ -40,10 +50,11 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "Carro{" +
-                "marca='" + marca + '\'' +
+        return "Carro{"  +
+                "id=" + id +
+                ", marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", anoFabricacao=" + anoFabricacao +
-                '}';
+                '}' + "\n";
     }
 }
