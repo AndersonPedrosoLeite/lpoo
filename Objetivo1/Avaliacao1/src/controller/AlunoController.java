@@ -2,6 +2,11 @@ package controller;
 
 import model.Aluno;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class AlunoController {
     public static void main(String[] args) {
         Aluno aluno1 = new Aluno();
@@ -13,6 +18,9 @@ public class AlunoController {
 
         System.out.println(aluno1);
         System.out.println(aluno2);
+        System.out.println(aluno3);
+        System.out.println(aluno4);
+
 
 
         aluno1.setId(1);
@@ -30,6 +38,26 @@ public class AlunoController {
         System.out.println("\n");
         System.out.println(" id:" + aluno2.getId() + " cpf:" + aluno2.getCpf() + " nome:" + aluno2.getNome() + " sobrenome:" + aluno2.getSobrenome() + " email:" + aluno2.getEmail());
 
+        List<Aluno> alunosList = new ArrayList<>();
+        alunosList.add(aluno1);
+        alunosList.add(aluno2);
+        alunosList.add(aluno3);
+        alunosList.add(aluno4);
+        alunosList.add(aluno5);
+        alunosList.add(aluno6);
+
+        System.out.println(alunosList);
+
+        Map<Integer, Aluno> alunosMap = new HashMap<>();
+        alunosMap.put(aluno1.getCpf(), aluno1);
+        alunosMap.put(aluno2.getCpf(), aluno2);
+        alunosMap.put(aluno3.getCpf(), aluno3);
+        alunosMap.put(aluno4.getCpf(), aluno4);
+        alunosMap.put(aluno5.getCpf(), aluno5);
+        alunosMap.put(aluno6.getCpf(), aluno6);
+
+        System.out.println("\n Coleção tipo Map");
+        System.out.println(alunosMap + "\n");
 
 
        /* aluno3.setEmail("brusque@brusque@gmail.com");
