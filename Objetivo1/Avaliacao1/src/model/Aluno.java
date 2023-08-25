@@ -10,6 +10,10 @@ public class Aluno {
     public Aluno() {
     }
 
+    public Aluno(Integer cpf, String email){
+
+    }
+
 
     public Aluno(Integer id, Integer cpf, String nome, String sobrenome, String email) {
         this.id = id;
