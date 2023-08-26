@@ -11,7 +11,8 @@ public class Aluno {
     }
 
     public Aluno(Integer cpf, String email){
-
+        this.cpf = cpf;
+        this.email = email;
     }
 
 

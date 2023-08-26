@@ -2,10 +2,7 @@ package controller;
 
 import model.Aluno;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AlunoController {
     public static void main(String[] args) {
@@ -37,6 +34,8 @@ public class AlunoController {
         System.out.println(" id:" + aluno1.getId() + " cpf:" + aluno1.getCpf() + " nome:" + aluno1.getNome() + " sobrenome:" + aluno1.getSobrenome() + " email:" + aluno1.getEmail());
         System.out.println("\n");
         System.out.println(" id:" + aluno2.getId() + " cpf:" + aluno2.getCpf() + " nome:" + aluno2.getNome() + " sobrenome:" + aluno2.getSobrenome() + " email:" + aluno2.getEmail());
+        aluno3.setId(3);
+        aluno4.setId(4);
 
         List<Aluno> alunosList = new ArrayList<>();
         alunosList.add(aluno1);
@@ -46,7 +45,10 @@ public class AlunoController {
         alunosList.add(aluno5);
         alunosList.add(aluno6);
 
+        System.out.println("\n Lista de alunos na ordem reversa");
+        alunosList.sort(Comparator.comparing(Aluno::getId).reversed());
         System.out.println(alunosList);
+
 
         Map<Integer, Aluno> alunosMap = new HashMap<>();
         alunosMap.put(aluno1.getCpf(), aluno1);
@@ -59,13 +61,13 @@ public class AlunoController {
         System.out.println("\n Coleção tipo Map");
         System.out.println(alunosMap + "\n");
 
+        System.out.println("Localizando o aluno de id: 5");
+        Aluno buscaAluno = alunosList.stream().filter(a -> a.getId().equals(5)).findAny().orElse(null);
+        System.out.println(buscaAluno);
 
-       /* aluno3.setEmail("brusque@brusque@gmail.com");
-        System.out.println("O nome da aluno(a) de id:" + aluno2.getId() + " é " + aluno2.getNome());
-        aluno1.setNome("Augusto");
-        System.out.println(aluno1);
-        System.out.println("O cpf do aluno(a) " + aluno2.getNome() + " é " + aluno2.getCpf());
-        */
+        alunosList.sort(Comparator.comparing(Aluno::getId).reversed());
+        System.out.println(alunosList);
+
     }
 
 
