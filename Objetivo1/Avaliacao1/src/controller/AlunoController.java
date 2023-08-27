@@ -13,10 +13,14 @@ public class AlunoController {
         Aluno aluno5 = new Aluno(5,355377899,"Caroline","Freitas","carol@gmail.com");
         Aluno aluno6 = new Aluno(6,4663552,"Marta","Dumont","marta@gmail.com");
 
+        System.out.println("Construtor padrão e contrutor parametrizado.");
         System.out.println(aluno1);
         System.out.println(aluno2);
         System.out.println(aluno3);
         System.out.println(aluno4);
+        System.out.println(aluno5);
+        System.out.println(aluno6);
+
 
 
 
