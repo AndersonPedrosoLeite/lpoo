@@ -34,7 +34,7 @@ public class AlunoController {
         aluno2.setNome("Daniel");
         aluno2.setSobrenome("Saraiva");
         aluno2.setEmail("danielsaraiva@gmail.com");
-        System.out.println("\n");
+        System.out.println("\nMétodos getters e setters");
         System.out.println(" id:" + aluno1.getId() + " cpf:" + aluno1.getCpf() + " nome:" + aluno1.getNome() + " sobrenome:" + aluno1.getSobrenome() + " email:" + aluno1.getEmail());
         System.out.println("\n");
         System.out.println(" id:" + aluno2.getId() + " cpf:" + aluno2.getCpf() + " nome:" + aluno2.getNome() + " sobrenome:" + aluno2.getSobrenome() + " email:" + aluno2.getEmail());
