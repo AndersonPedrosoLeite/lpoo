@@ -61,14 +61,16 @@ public class AlunoController {
         alunosMap.put(aluno4.getCpf(), aluno4);
         alunosMap.put(aluno5.getCpf(), aluno5);
         alunosMap.put(aluno6.getCpf(), aluno6);
+        alunosMap.put(aluno5.getId(), aluno5);
+
 
         System.out.println("\n Coleção tipo Map");
-        System.out.println(alunosMap + "\n");
+        System.out.println(alunosMap.get(aluno5.getId()) + "\n");
 
         System.out.println("Localizando o aluno de id: 5");
         Aluno buscaAluno = alunosList.stream().filter(a -> a.getId().equals(5)).findAny().orElse(null);
         System.out.println(buscaAluno);
-
+        System.out.println();
         alunosList.sort(Comparator.comparing(Aluno::getId).reversed());
         System.out.println(alunosList);
 
