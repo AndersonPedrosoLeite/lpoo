@@ -1,7 +1,7 @@
 package model;
 
-public abstract class Funcionario {
-    protected  String nome;
+public abstract class Funcionario {   //abstract impede que criem-se instâncias na classe//
+    protected   String nome;
     protected Double salario;
 
     public Funcionario() {
@@ -12,20 +12,20 @@ public abstract class Funcionario {
         this.salario = salario;
     }
 
-    public void setSalario(Double salario){
-
+    public String getNome() {
+        return nome;
     }
-    public Double getSalario(){
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getSalario() {
         return salario;
     }
-    public void getBonus(Double taxa){
-    }
 
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", salario=" + salario +
-                '}';
+    public void setSalario(Double salario) {
+        this.salario = salario;
     }
+    public abstract double getBonus();
 }
