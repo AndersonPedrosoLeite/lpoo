@@ -1,6 +1,7 @@
 package model;
 
 public class Automovel {
+    private Integer id;
     private String renavan;
     private String placa;
     private String cor;
@@ -13,7 +14,20 @@ public class Automovel {
     public Automovel() {
     }
 
-    public Automovel(String renavan, String placa, String cor, Integer num_rodas, String combustível, Integer quilometragem, String chassi, Double valor_locacao) {
+    public Automovel(Integer id) {
+        this.id = id;
+    }
+
+    public Automovel(Integer id, String renavan, String placa, String cor, String chassi) {
+        this.id = id;
+        this.renavan = renavan;
+        this.placa = placa;
+        this.cor = cor;
+        this.chassi = chassi;
+    }
+
+    public Automovel(Integer id, String renavan, String placa, String cor, Integer num_rodas, String combustível, Integer quilometragem, String chassi, Double valor_locacao) {
+        this.id = id;
         this.renavan = renavan;
         this.placa = placa;
         this.cor = cor;
@@ -22,6 +36,14 @@ public class Automovel {
         this.quilometragem = quilometragem;
         this.chassi = chassi;
         this.valor_locacao = valor_locacao;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getRenavan() {
