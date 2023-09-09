@@ -5,9 +5,11 @@ public abstract class Funcionario {   //abstract impede que criem-se instâncias
     protected Double salario;
 
     public Funcionario() {
+        super();
     }
 
     public Funcionario(String nome, Double salario) {
+        super();
         this.nome = nome;
         this.salario = salario;
     }
