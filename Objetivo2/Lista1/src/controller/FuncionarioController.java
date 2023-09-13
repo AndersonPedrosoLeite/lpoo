@@ -2,6 +2,10 @@ package controller;
 
 import model.*;
 
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
+
 public class FuncionarioController {
     public static void main(String[] args) {
             Gerente gerente1 = new GerenteGeral("Mariana",6500.00);
@@ -49,6 +53,36 @@ public class FuncionarioController {
             System.out.println(desenvolvedor16 + " Bônus: " + desenvolvedor16.getBonus());
             System.out.println(desenvolvedor17 + " Bônus: " + desenvolvedor17.getBonus());
             System.out.println(desenvolvedor18 + " Bônus: " + desenvolvedor18.getBonus());
+
+        List<Funcionario> funcionarios = new ArrayList<>();
+            funcionarios.add(gerente1);
+            funcionarios.add(gerente2);
+            funcionarios.add(desenvolvedor1);
+            funcionarios.add(desenvolvedor2);
+            funcionarios.add(desenvolvedor3);
+            funcionarios.add(desenvolvedor4);
+            funcionarios.add(desenvolvedor5);
+            funcionarios.add(desenvolvedor6);
+            funcionarios.add(desenvolvedor7);
+            funcionarios.add(desenvolvedor8);
+            funcionarios.add(desenvolvedor9);
+            funcionarios.add(desenvolvedor10);
+            funcionarios.add(desenvolvedor11);
+            funcionarios.add(desenvolvedor12);
+            funcionarios.add(desenvolvedor13);
+            funcionarios.add(desenvolvedor14);
+            funcionarios.add(desenvolvedor15);
+            funcionarios.add(desenvolvedor16);
+            funcionarios.add(desenvolvedor17);
+            funcionarios.add(desenvolvedor18);
+
+            System.out.println("Lista de funcionários e seus respectivos salários\n" + funcionarios);
+            double total_folha_com_bonus = 0.0;
+            for (Funcionario funcionario : funcionarios) {
+                total_folha_com_bonus += funcionario.getSalario() + funcionario.getBonus();
+            }
+            System.out.println("Total da folha salarial + bônus: ");
+            System.out.println(NumberFormat.getCurrencyInstance().format(total_folha_com_bonus));
 
 
 
