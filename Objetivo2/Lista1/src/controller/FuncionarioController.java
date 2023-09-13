@@ -1,0 +1,56 @@
+package controller;
+
+import model.*;
+
+public class FuncionarioController {
+    public static void main(String[] args) {
+            Gerente gerente1 = new GerenteGeral("Mariana",6500.00);
+            Gerente gerente2 = new GerenteDesenvolvimento("Gustavo", 4500.00);
+
+            Desenvolvedor desenvolvedor1 = new Senior("Antônio", 4300.00);
+            Desenvolvedor desenvolvedor2 = new Senior("Laura",3500.00);
+            Desenvolvedor desenvolvedor3 = new Senior("Felipe",3500.00);
+            Desenvolvedor desenvolvedor4 = new Senior("Roberta",3500.00);
+            Desenvolvedor desenvolvedor5 = new Senior("Julia",3500.00);
+            Desenvolvedor desenvolvedor6 = new Senior("Marcos",3500.00);
+
+            Desenvolvedor desenvolvedor7 = new Pleno("Carla",2500.00);
+            Desenvolvedor desenvolvedor8 = new Pleno("Fabiane",2500.00);
+            Desenvolvedor desenvolvedor9 = new Pleno("Rafael",2500.00);
+            Desenvolvedor desenvolvedor10 = new Pleno("João",2500.00);
+            Desenvolvedor desenvolvedor11 = new Pleno("Fernando",2500.00);
+            Desenvolvedor desenvolvedor12 = new Pleno("Augusto", 2500.00);
+
+            Desenvolvedor desenvolvedor13 = new Junior("Anderson",1800.00);
+            Desenvolvedor desenvolvedor14 = new Junior("Gabriela",1800.00);
+            Desenvolvedor desenvolvedor15 = new Junior("Carlos",1800.00);
+            Desenvolvedor desenvolvedor16 = new Junior("Nicolas",1800.00);
+            Desenvolvedor desenvolvedor17 = new Junior("Amanda",1800.00);
+            Desenvolvedor desenvolvedor18 = new Junior("Izac",1800.00);
+
+            System.out.println("Bônus de cada funcionário");
+            System.out.println(gerente1 + " Bônus: " + gerente1.getBonus());
+            System.out.println(gerente2 + " Bônus: " + gerente2.getBonus());
+            System.out.println(desenvolvedor1 + " Bônus: " + desenvolvedor1.getBonus());
+            System.out.println(desenvolvedor2 + " Bônus: " + desenvolvedor2.getBonus());
+            System.out.println(desenvolvedor3 + " Bônus: " + desenvolvedor3.getBonus());
+            System.out.println(desenvolvedor4 + " Bônus: " + desenvolvedor4.getBonus());
+            System.out.println(desenvolvedor5 + " Bônus: " + desenvolvedor5.getBonus());
+            System.out.println(desenvolvedor6 + " Bônus: " + desenvolvedor6.getBonus());
+            System.out.println(desenvolvedor7 + " Bônus: " + desenvolvedor7.getBonus());
+            System.out.println(desenvolvedor8 + " Bônus: " + desenvolvedor8.getBonus());
+            System.out.println(desenvolvedor9 + " Bônus: " + desenvolvedor9.getBonus());
+            System.out.println(desenvolvedor10 + " Bônus: " + desenvolvedor10.getBonus());
+            System.out.println(desenvolvedor11 + " Bônus: " + desenvolvedor11.getBonus());
+            System.out.println(desenvolvedor12 + " Bônus: " + desenvolvedor12.getBonus());
+            System.out.println(desenvolvedor13 + " Bônus: " + desenvolvedor13.getBonus());
+            System.out.println(desenvolvedor14 + " Bônus: " + desenvolvedor14.getBonus());
+            System.out.println(desenvolvedor15 + " Bônus: " + desenvolvedor15.getBonus());
+            System.out.println(desenvolvedor16 + " Bônus: " + desenvolvedor16.getBonus());
+            System.out.println(desenvolvedor17 + " Bônus: " + desenvolvedor17.getBonus());
+            System.out.println(desenvolvedor18 + " Bônus: " + desenvolvedor18.getBonus());
+
+
+
+    }
+}

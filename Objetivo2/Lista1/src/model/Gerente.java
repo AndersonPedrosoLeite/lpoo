@@ -12,6 +12,7 @@ public class Gerente  extends  Funcionario{
 
     @Override
     public double getBonus() {
+
         return  getSalario() * 0.2;
     }
 
