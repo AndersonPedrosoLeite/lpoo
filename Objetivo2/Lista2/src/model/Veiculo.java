@@ -5,7 +5,7 @@ public  abstract class Veiculo {
     private String propulsao;
     private String marca;
     private String modelo;
-    private Integer anoFabricacao;
+    public Integer anoFabricacao;
     public Veiculo() {
         super();
     }

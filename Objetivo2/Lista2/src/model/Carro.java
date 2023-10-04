@@ -2,13 +2,24 @@ package model;
 // os métodos em uma interface, são por natureza, públicos e abstratos//
 public class Carro extends Veiculo implements Automovel{
     private Integer capacidadePortaMalas;
-    private String renavam;   //pq os atributos ficam private se no diagrama estão public? //
+    private String renavam;
     private String chassi;
     private String placa;
 
     public Carro() {
+
         super();
     }
+
+
+    public Carro(Integer numeroDeEixos, String propulsao, String marca, String modelo, Integer anoFabricacao, Integer capacidadePortaMalas, String renavam, String chassi, String placa) {
+        super(numeroDeEixos, propulsao, marca, modelo, anoFabricacao);
+        this.capacidadePortaMalas = capacidadePortaMalas;
+        this.renavam = renavam;
+        this.chassi = chassi;
+        this.placa = placa;
+    }
+
 
     @Override   // está sobreescrevendo o comportamento
     public String getRenavam() {
@@ -42,7 +53,7 @@ public class Carro extends Veiculo implements Automovel{
 
     @Override
     public String toString() {
-        return "\nmodel.Carro{" +
+        return "\nCarro{" +
                 "capacidadePortaMalas=" + capacidadePortaMalas +
                 ", renavam='" + renavam + '\'' +
                 ", chassi='" + chassi + '\'' +

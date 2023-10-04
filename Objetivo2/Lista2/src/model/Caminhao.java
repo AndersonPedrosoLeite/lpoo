@@ -10,6 +10,15 @@ public class Caminhao extends Veiculo implements Automovel{
         super();
     }
 
+
+    public Caminhao(Integer numeroDeEixos, String propulsao, String marca, String modelo, Integer anoFabricacao, Integer capacidadeDeCarga, String renavam, String chassi, String placa) {
+        super(numeroDeEixos, propulsao, marca, modelo, anoFabricacao);
+        this.capacidadeDeCarga = capacidadeDeCarga;
+        this.renavam = renavam;
+        this.chassi = chassi;
+        this.placa = placa;
+    }
+
     @Override
     public String getRenavam() {
         return renavam;
@@ -42,7 +51,7 @@ public class Caminhao extends Veiculo implements Automovel{
 
     @Override
     public String toString() {
-        return "\nmodel.Caminhao{" +
+        return "\nCaminhao{" +
                 "capacidadeDeCarga=" + capacidadeDeCarga +
                 ", renavam='" + renavam + '\'' +
                 ", chassi='" + chassi + '\'' +

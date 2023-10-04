@@ -8,9 +8,36 @@ public class Bicicleta extends Veiculo{
         super();
     }
 
+    public Bicicleta(Integer tamanhodaRoda, String chassi) {
+        this.tamanhodaRoda = tamanhodaRoda;
+        this.chassi = chassi;
+    }
+
+    public Bicicleta(Integer numeroDeEixos, String propulsao, String marca, String modelo, Integer anoFabricacao, Integer tamanhodaRoda, String chassi) {
+        super(numeroDeEixos, propulsao, marca, modelo, anoFabricacao);
+        this.tamanhodaRoda = tamanhodaRoda;
+        this.chassi = chassi;
+    }
+
+    public Integer getTamanhodaRoda() {
+        return tamanhodaRoda;
+    }
+
+    public void setTamanhodaRoda(Integer tamanhodaRoda) {
+        this.tamanhodaRoda = tamanhodaRoda;
+    }
+
+    public String getChassi() {
+        return chassi;
+    }
+
+    public void setChassi(String chassi) {
+        this.chassi = chassi;
+    }
+
     @Override
     public String toString() {
-        return "\nmodel.Bicicleta{" +
+        return "\nBicicleta{" +
                 "tamanhodaRoda=" + tamanhodaRoda +
                 ", chassi='" + chassi + '\'' +
                 ", numeroDeEixos=" + getNumeroDeEixos() +
