@@ -4,6 +4,9 @@ import model.Conta;
 import model.ContaCorrente;
 import model.ContaPoupanca;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContaController {
     public static void main(String[] args) {
         Conta c1 = new ContaPoupanca(3000.00);
@@ -19,5 +22,15 @@ public class ContaController {
         System.out.println(c4);
         System.out.println(c5);
         System.out.println(c6);
+
+        List<Conta> contaList = new ArrayList<>();
+        contaList.add(c1);
+        contaList.add(c2);
+        contaList.add(c3);
+        contaList.add(c4);
+        contaList.add(c5);
+
+        System.out.println("Contas cadastradas no sistema: ");
+        System.out.println(contaList);
     }
 }
