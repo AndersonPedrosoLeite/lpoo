@@ -8,7 +8,8 @@ public abstract class Conta {
     protected Double saldo;
 
     public void deposita(Double valor) {
-        this.saldo = saldo;
+
+        this.saldo = this.saldo + valor;
     }
 
     public void saca(Double valor) {
