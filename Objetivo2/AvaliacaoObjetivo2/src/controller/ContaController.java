@@ -32,8 +32,18 @@ public class ContaController {
         contaList.add(c3);
         contaList.add(c4);
         contaList.add(c5);
+        contaList.add(c6);
+
+        List<Associado> associadoList = new ArrayList<>();
+
+        associadoList.add(a1);
+        associadoList.add(a2);
+        associadoList.add(a3);
 
         System.out.println("Contas cadastradas no sistema: ");
         System.out.println(contaList);
+
+        System.out.println("Lista de associados: ");
+        System.out.println(associadoList);
     }
 }
