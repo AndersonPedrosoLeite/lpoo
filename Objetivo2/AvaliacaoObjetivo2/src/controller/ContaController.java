@@ -3,6 +3,7 @@ package controller;
 import model.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ContaController {
@@ -13,12 +14,12 @@ public class ContaController {
         Conta c4 = new ContaCorrente(6500.00);
         Conta c5 = new ContaCorrente(2200.00);
         Conta c6 = new ContaCorrente(1800.00);
-        Associado a1 = new Cliente("Fernanda Monteiro",100);
-        Associado a2 = new Cliente("Cristopher Medeiros",400);
-        Associado a3 = new Cliente("Janaína Cunha",600);
-        Associado a4 = new Cliente("Elton Rudiger", 300);
-        Associado a5 = new Cliente("Márcia Nolasco", 600);
-        Associado a6 = new Cliente("João Félix",600);
+        Cliente a1 = new Cliente("Fernanda Monteiro",100);
+        Cliente a2 = new Cliente("Cristopher Medeiros",400);
+        Cliente a3 = new Cliente("Janaína Cunha",600);
+        Cliente a4 = new Cliente("Elton Rudiger", 300);
+        Cliente a5 = new Cliente("Márcia Nolasco", 600);
+        Cliente a6 = new Cliente("João Félix",600);
 
 
         System.out.println(c1);
@@ -37,20 +38,20 @@ public class ContaController {
         contaList.add(c5);
         contaList.add(c6);
 
-        List<Associado> associadoList = new ArrayList<>();
+        List<Cliente> clienteList = new ArrayList<>();
 
-        associadoList.add(a1);
-        associadoList.add(a2);
-        associadoList.add(a3);
-        associadoList.add(a4);
-        associadoList.add(a5);
-        associadoList.add(a6);
+        ((ArrayList) clienteList).add(a1);
+        ((ArrayList) clienteList).add(a2);
+        ((ArrayList) clienteList).add(a3);
+        ((ArrayList) clienteList).add(a4);
+        ((ArrayList) clienteList).add(a5);
+        ((ArrayList) clienteList).add(a6);
 
         System.out.println("Contas cadastradas no sistema: ");
         System.out.println(contaList);
 
         System.out.println("Lista de associados: ");
-        System.out.println(associadoList);
+        System.out.println(clienteList);
 
         c1.deposita(1000.00);
         System.out.println("Saldo da conta c1:" +c1);
@@ -67,6 +68,10 @@ public class ContaController {
         System.out.println("Saldo atual da conta c5: " + c5);
         System.out.println("Saque de R$400 na conta corrente c5.");
         c5.saca(400.0);
+
+
+        clienteList.sort(Comparator.comparing(Cliente::getNome));
+        System.out.println("Lista de clientes associados ordenados pela quantidade de cotas: " + clienteList);
 
 
     }

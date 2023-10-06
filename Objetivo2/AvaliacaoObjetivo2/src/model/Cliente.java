@@ -2,20 +2,52 @@ package model;
 
 public class Cliente implements Associado{
     private String nome;
-    private  Integer qdeCotas;
+    private Integer qdeCotas;
     private Integer valorCota;
 
     public Cliente() {
+        super();
     }
 
-    public Cliente(String nome, int qdeCotas) {
+    public Cliente(String nome, Integer qdeCotas) {
         this.nome = nome;
         this.qdeCotas = qdeCotas;
     }
 
-    @Override
-    public Double lucros(int qdeCotas, double valorCota) {
-        return null;
+    public String getNome() {
+
+        return nome;
+    }
+
+    public void setNome(String nome) {
+
+        this.nome = nome;
+    }
+
+    public Integer getqdeCotas() {
+
+        return qdeCotas;
+    }
+
+    public void setqdeCotas(Integer qdeCotas) {
+
+        this.qdeCotas = qdeCotas;
+    }
+
+    public Integer getValorCota() {
+
+        return valorCota;
+    }
+
+    public void setValorCota(Integer valorCota) {
+
+        this.valorCota = valorCota;
+    }
+
+
+    //@Override
+    public Double lucros(Integer qdeCotas, double valorCota) {
+        return qdeCotas * valorCota;
     }
 
     @Override

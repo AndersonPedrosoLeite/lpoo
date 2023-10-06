@@ -3,5 +3,5 @@ package model;
 public interface Associado {
 
 
-    public Double lucros(int qdeCotas, double valorCota);
+    public abstract Double lucros(Integer qdeCotas, double valorCota);
 }

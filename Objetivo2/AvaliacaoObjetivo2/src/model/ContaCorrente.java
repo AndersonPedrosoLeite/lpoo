@@ -7,16 +7,18 @@ public class ContaCorrente extends Conta implements Associado {
         super(saldo);
     }
 
-    @Override
-    public Double lucros(int qdeCotas, double valorCota) {
-        return null;
-    }
+
 
     @Override
     public String toString() {
         return "\nContaCorrente{" +
                 "saldo=" + saldo +
                 '}';
+    }
+
+    @Override
+    public Double lucros(Integer qdeCotas, double valorCota) {
+        return null;
     }
 }
 
