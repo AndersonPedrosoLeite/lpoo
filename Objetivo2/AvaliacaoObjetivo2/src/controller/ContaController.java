@@ -1,8 +1,6 @@
 package controller;
 
-import model.Conta;
-import model.ContaCorrente;
-import model.ContaPoupanca;
+import model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +13,10 @@ public class ContaController {
         Conta c4 = new ContaCorrente(6500.00);
         Conta c5 = new ContaCorrente(2200.00);
         Conta c6 = new ContaCorrente(1800.00);
+        Associado a1 = new Cliente("Fernanda Monteiro");
+        Associado a2 = new Cliente("Cristopher Medeiros");
+        Associado a3 = new Cliente("Janaína Cunha");
+
 
         System.out.println(c1);
         System.out.println(c2);
@@ -22,6 +24,7 @@ public class ContaController {
         System.out.println(c4);
         System.out.println(c5);
         System.out.println(c6);
+
 
         List<Conta> contaList = new ArrayList<>();
         contaList.add(c1);
