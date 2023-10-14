@@ -43,6 +43,9 @@ public class Cliente implements Associado{
 
         this.valorCota = valorCota;
     }
+    public Integer getqdeCotas(Integer qdeCotas){
+        return qdeCotas;
+    }
 
 
     //@Override

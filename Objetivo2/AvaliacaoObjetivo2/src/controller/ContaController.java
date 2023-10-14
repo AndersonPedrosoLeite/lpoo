@@ -2,9 +2,7 @@ package controller;
 
 import model.*;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ContaController {
     public static void main(String[] args) {
@@ -38,20 +36,19 @@ public class ContaController {
         contaList.add(c5);
         contaList.add(c6);
 
-        List<Cliente> clienteList = new ArrayList<>();
+        List <Associado> associadoList = new ArrayList<>();
+        ((ArrayList) associadoList).add(a1);
+        ((ArrayList) associadoList).add(a2);
+        ((ArrayList) associadoList).add(a3);
 
-        ((ArrayList) clienteList).add(a1);
-        ((ArrayList) clienteList).add(a2);
-        ((ArrayList) clienteList).add(a3);
-        ((ArrayList) clienteList).add(a4);
-        ((ArrayList) clienteList).add(a5);
-        ((ArrayList) clienteList).add(a6);
+
+
 
         System.out.println("Contas cadastradas no sistema: ");
         System.out.println(contaList);
 
         System.out.println("Lista de associados: ");
-        System.out.println(clienteList);
+        System.out.println(associadoList);
 
         c1.deposita(1000.00);
         System.out.println("Saldo da conta c1:" +c1);
@@ -69,9 +66,16 @@ public class ContaController {
         System.out.println("Saque de R$400 na conta corrente c5.");
         c5.saca(400.0);
 
+        System.out.println();
+        associadoList.sort(Comparator.comparing(Associado::getNome));
+        System.out.println("Lista de clientes associados: " + associadoList);
 
-        clienteList.sort(Comparator.comparing(Cliente::getNome));
-        System.out.println("Lista de clientes associados ordenados pela quantidade de cotas: " + clienteList);
+        Map <Integer, Associado> associadosMap = new HashMap<>();
+        associadosMap.put(a1.getqdeCotas(), a1);
+        associadosMap.put(a2.getqdeCotas(), a2);
+        associadosMap.put(a3.getqdeCotas(), a3);
+
+
 
 
     }

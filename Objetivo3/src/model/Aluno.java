@@ -3,8 +3,14 @@ package model;
 import java.util.List;
 
 public class Aluno {
-    private Long matricula;
+    private Integer matricula;
     private  String nome;
     private String sobrenome;
-    private List<Disciplina> disciplinas;
+    
+
+    public Aluno(Integer matricula, String nome, String sobrenome) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    }
 }
