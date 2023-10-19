@@ -23,5 +23,10 @@ public  class  ContaCorrente extends Conta implements Associado {
     public <U> U getNome() {
         return null;
     }
+
+    @Override
+    public <U> U getqdeCotas() {
+        return null;
+    }
 }
 

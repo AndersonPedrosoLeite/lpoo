@@ -12,12 +12,12 @@ public class ContaController {
         Conta c4 = new ContaCorrente(6500.00);
         Conta c5 = new ContaCorrente(2200.00);
         Conta c6 = new ContaCorrente(1800.00);
-        Cliente a1 = new Cliente("Fernanda Monteiro",100);
-        Cliente a2 = new Cliente("Cristopher Medeiros",400);
-        Cliente a3 = new Cliente("Janaína Cunha",600);
-        Cliente a4 = new Cliente("Elton Rudiger", 300);
-        Cliente a5 = new Cliente("Márcia Nolasco", 600);
-        Cliente a6 = new Cliente("João Félix",600);
+        Cliente a1 = new Cliente("Fernanda Monteiro",100,22);
+        Cliente a2 = new Cliente("Cristopher Medeiros",400,43);
+        Cliente a3 = new Cliente("Janaína Cunha",600,30);
+        Cliente a4 = new Cliente("Elton Rudiger", 300,18);
+        Cliente a5 = new Cliente("Márcia Nolasco", 600,9);
+        Cliente a6 = new Cliente("João Félix",600,12);
 
 
         System.out.println(c1);
@@ -36,10 +36,13 @@ public class ContaController {
         contaList.add(c5);
         contaList.add(c6);
 
-        List <Associado> associadoList = new ArrayList<>();
+        List<Cliente> associadoList = new ArrayList<>();
         ((ArrayList) associadoList).add(a1);
         ((ArrayList) associadoList).add(a2);
         ((ArrayList) associadoList).add(a3);
+        ((ArrayList) associadoList).add(a4);
+        ((ArrayList) associadoList).add(a5);
+        ((ArrayList) associadoList).add(a6);
 
 
 
@@ -70,13 +73,25 @@ public class ContaController {
         associadoList.sort(Comparator.comparing(Associado::getNome));
         System.out.println("Lista de clientes associados: " + associadoList);
 
-        Map <Integer, Associado> associadosMap = new HashMap<>();
-        associadosMap.put(a1.getqdeCotas(), a1);
-        associadosMap.put(a2.getqdeCotas(), a2);
-        associadosMap.put(a3.getqdeCotas(), a3);
+        System.out.println();
+        associadoList.sort(Comparator.comparing(Cliente::getqdeCotas).reversed());
+        System.out.println("Lista dos clientes associados e suas respectivas cotas em ordem decrescente: " + associadoList);
 
+        Map<Integer, Cliente> clientesMap = new HashMap<>();
+        clientesMap.put(a1.getqdeCotas(), a1);
+        clientesMap.put(a2.getqdeCotas(), a2);
+        clientesMap.put(a3.getqdeCotas(), a3);
+        clientesMap.put(a4.getqdeCotas(), a4);
+        clientesMap.put(a5.getqdeCotas(), a5);
+        clientesMap.put(a6.getqdeCotas(), a6);
+        System.out.println();
+        Associado associadofind = associadoList.stream().filter(c -> c.getqdeCotas().equals(600)).findAny().orElse(null);
+        System.out.println("Associados com maior número de cotas: " + associadofind);
 
-
+        //g
+        System.out.println();
+        contaList.sort(Comparator.comparing(Conta::getsaldo));
+        System.out.println("Contas cadastradas no sistema: " + contaList);
 
     }
 }

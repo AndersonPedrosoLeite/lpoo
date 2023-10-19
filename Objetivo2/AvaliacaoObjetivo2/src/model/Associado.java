@@ -8,4 +8,5 @@ public interface Associado {
 
     <U> U getNome();
 
+    <U> U getqdeCotas();
 }

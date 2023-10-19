@@ -1,11 +1,21 @@
 package model;
 
 public abstract class Conta {
-    public Conta(Double saldo) {
+
+    protected Double saldo;
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
 
-    protected Double saldo;
+    public Conta(Double saldo) {
+
+        this.saldo = saldo;
+    }
 
     public void deposita(Double valor) {
 
@@ -23,5 +33,17 @@ public abstract class Conta {
     }
     public  void atualiza(Double taxa){
         this.saldo += this.saldo * (taxa/100);
+    }
+
+
+    public <U> U getsaldo() {
+        return (U) getSaldo();
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "saldo=" + getSaldo() +
+                '}';
     }
 }

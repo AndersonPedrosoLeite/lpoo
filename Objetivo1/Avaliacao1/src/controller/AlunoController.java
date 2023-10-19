@@ -65,7 +65,7 @@ public class AlunoController {
 
 
         System.out.println("\n Coleção tipo Map");
-        System.out.println(alunosMap.get(aluno5.getId()) + "\n");
+
 
         System.out.println("Localizando o aluno de id: 5");
         Aluno buscaAluno = alunosList.stream().filter(a -> a.getId().equals(5)).findAny().orElse(null);

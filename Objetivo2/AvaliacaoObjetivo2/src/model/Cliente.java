@@ -1,11 +1,12 @@
 package model;
 
-public class Cliente implements Associado{
+public class Cliente implements Associado {
     private String nome;
-    private Integer qdeCotas;
+    private  Integer qdeCotas;
     private Integer valorCota;
 
     public Cliente() {
+
         super();
     }
 
@@ -43,12 +44,14 @@ public class Cliente implements Associado{
 
         this.valorCota = valorCota;
     }
-    public Integer getqdeCotas(Integer qdeCotas){
-        return qdeCotas;
+
+    public Cliente(String nome, Integer qdeCotas, Integer valorCota) {
+        this.nome = nome;
+        this.qdeCotas = qdeCotas;
+        this.valorCota = valorCota;
     }
 
-
-    //@Override
+    @Override
     public Double lucros(Integer qdeCotas, double valorCota) {
         return qdeCotas * valorCota;
     }
@@ -61,5 +64,11 @@ public class Cliente implements Associado{
                 ", valorCota=" + valorCota +
                 '}';
     }
+
+    public static <U> U getsaldo(Conta conta) {
+        return getsaldo(conta);
+    }
+
+
 }
 
