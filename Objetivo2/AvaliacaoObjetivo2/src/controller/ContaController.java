@@ -88,10 +88,16 @@ public class ContaController {
         Associado associadofind = associadoList.stream().filter(c -> c.getqdeCotas().equals(600)).findAny().orElse(null);
         System.out.println("Associados com maior número de cotas: " + associadofind);
 
+
+
         //g
         System.out.println();
         contaList.sort(Comparator.comparing(Conta::getsaldo));
         System.out.println("Contas cadastradas no sistema: " + contaList);
+        System.out.println();
+        System.out.println(associadoList);
+        System.out.println();
+        System.out.println("Conta com maior saldo bancário: ");
 
     }
 }
