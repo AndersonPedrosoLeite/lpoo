@@ -21,6 +21,9 @@ public class Produto {
         this.itensList = itensList;
     }
 
+    public Produto(int codigo, String teclado, int quantidade, double preco, String periférico) {
+    }
+
     public int getCodigo() {
         return codigo;
     }
