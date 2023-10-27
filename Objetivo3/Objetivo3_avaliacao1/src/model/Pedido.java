@@ -7,7 +7,7 @@ public class Pedido {
     //associação binária um vendedor pode ter 0 ou muitos pedidos e um pedido pode ter somente 1 vendedor//
     Vendedor vendedor;
     Tipo tipo;
-    private Item item;
+    Item item;
 
     public Pedido() {
     }
@@ -19,6 +19,9 @@ public class Pedido {
         this.vendedor = vendedor;
         this.tipo = tipo;
         this.item = item;
+    }
+
+    public Pedido(int i, String s, double v, Funcionario funcionario2) {
     }
 
     public int getNumero() {
