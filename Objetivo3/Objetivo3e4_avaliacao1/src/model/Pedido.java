@@ -12,6 +12,12 @@ public class Pedido {
     public Pedido() {
     }
 
+    public Pedido(int numero, String data, Double valor) {
+        this.numero = numero;
+        this.data = data;
+        this.valor = valor;
+    }
+
     public Pedido(int numero, String data, Double valor, Vendedor vendedor, Tipo tipo, Item item) {
         this.numero = numero;
         this.data = data;
@@ -21,7 +27,9 @@ public class Pedido {
         this.item = item;
     }
 
-    public Pedido(int i, String s, double v, Funcionario funcionario2) {
+
+
+    public Pedido(int i, String s, double v, Funcionario funcionario1, Item item1) {
     }
 
     public int getNumero() {
@@ -71,6 +79,8 @@ public class Pedido {
     public void setItem(Item item) {
         this.item = item;
     }
+
+
 
     @Override
     public String toString() {

@@ -21,7 +21,12 @@ public class Produto {
         this.itensList = itensList;
     }
 
-    public Produto(int codigo, String teclado, int quantidade, double preco, String periférico) {
+    public Produto(int codigo, String nome, int quantidade, double preco) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.preco = preco;
+
     }
 
     public int getCodigo() {

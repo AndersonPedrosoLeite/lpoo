@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.MinhaExcecao;
+
 public class Item {
     private int codItem;
     private double desconto;
@@ -47,6 +49,13 @@ public class Item {
 
     public void setProduto(Produto produto) {
         this.produto = produto;
+    }
+    public void baixaEstoque() {
+        try {
+            this.quantidade -= quantidade;
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

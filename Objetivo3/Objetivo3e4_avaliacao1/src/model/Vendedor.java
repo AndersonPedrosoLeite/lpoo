@@ -8,6 +8,12 @@ public class Vendedor extends Funcionario{
     private List<Pedido> pedidosList = new ArrayList<>();
 
     public Vendedor(String local) {
+        super();
+        this.local = local;
+    }
+
+    public Vendedor(int matricula, String nome, String endereco, String bairro, String cep, String cidade, String estado, String local) {
+        super(matricula, nome, endereco, bairro, cep, cidade, estado);
         this.local = local;
     }
 
