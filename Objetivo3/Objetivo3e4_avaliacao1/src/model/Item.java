@@ -50,13 +50,10 @@ public class Item {
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
-    public void baixaEstoque() {
-        try {
-            this.quantidade -= quantidade;
-        } catch (ArithmeticException e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
+
 
     @Override
     public String toString() {

@@ -68,6 +68,13 @@ public class Produto {
     public void setItensList(List<Item> itensList) {
         this.itensList = itensList;
     }
+    public void baixaEstoque() {
+        try {
+            this.quantidade = quantidade - 1;
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public String toString() {

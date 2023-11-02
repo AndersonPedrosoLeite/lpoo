@@ -3,6 +3,7 @@ package controller;
 import model.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class DistribuidoraController {
@@ -23,10 +24,6 @@ public class DistribuidoraController {
         itensList.add(item2);
         itensList.add(item3);
         itensList.add(item4);
-        Produto produto5 = new Produto(5, "notebook", 300, 2223.50, itensList);
-        Produto produto6 = new Produto(6, "headset", 60, 179.90, itensList);
-        Produto produto7 = new Produto(7, "luminaria", 74, 89.90, itensList);
-        Produto produto8 = new Produto(8, "water cooler", 138, 134.50, itensList);
 
         Pedido pedido1 = new Pedido(1, "30/10/2023", 733.34);
         Pedido pedido2 = new Pedido(2,"30/10/2023",1259.90);
@@ -42,6 +39,9 @@ public class DistribuidoraController {
 
         Pedido venda1 = new Pedido(1,"30/10/2023",894.34, (Vendedor) funcionario2,tipo1,item1);
         Pedido venda2 = new Pedido(2,"30/10/2023",1322.5, (Vendedor) funcionario2,tipo2,item2);
+        List <Pedido> pedidosList = new ArrayList<>();
+        pedidosList.add(venda1);
+        pedidosList.add(venda2);
 
         System.out.println();
         System.out.println("Vendas realizadas: ");
@@ -51,6 +51,21 @@ public class DistribuidoraController {
         System.out.println();
         System.out.println("Quantidade Item1: " + item1.getQuantidade());
         System.out.println("Quantidade Item2: " + item2.getQuantidade());
+        produto1.baixaEstoque();
+        produto2.baixaEstoque();
+        System.out.println("Quantidade Produto 1: " + produto1.getQuantidade());
+        System.out.println("Quantidade Produto 2: " + produto2.getQuantidade());
+        List <Produto> produtosList =new ArrayList<>();
+        produtosList.add(produto1);
+        produtosList.add(produto2);
+        produtosList.add(produto3);
+        produtosList.add(produto4);
+
+
+        System.out.println();
+        produtosList.sort(Comparator.comparing(Produto::getCodigo));
+        System.out.println("Estoque de produtos: ");
+        System.out.println(produtosList);
 
 
     }
