@@ -29,6 +29,7 @@ public class Produto {
 
     }
 
+
     public int getCodigo() {
         return codigo;
     }
@@ -68,6 +69,7 @@ public class Produto {
     public void setItensList(List<Item> itensList) {
         this.itensList = itensList;
     }
+
     public void baixaEstoque() {
         try {
             this.quantidade = quantidade - 1;
@@ -75,7 +77,9 @@ public class Produto {
             e.printStackTrace();
         }
     }
-
+    public void adicionaEstoque(){
+        this.quantidade = quantidade + 1;
+    }
     @Override
     public String toString() {
         return "\nProduto{" +

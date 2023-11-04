@@ -6,15 +6,29 @@ import java.util.List;
 public class Fornecimento {
     private String data;
     private double valorTotal;
+    Fornecedor fornecedor;
+    Produto produto;
     List <Fornecedor> fornecedoresList = new ArrayList<>();
     List <Produto> produtosList = new ArrayList<>();
 
     public Fornecimento() {
     }
 
+    public Fornecimento(String data, double valorTotal, Fornecedor fornecedor, Produto produto) {
+        this.data = data;
+        this.valorTotal = valorTotal;
+        this.fornecedor = fornecedor;
+        this.produto = produto;
+    }
+
     public Fornecimento(String data, double valorTotal, List<Fornecedor> fornecedoresList, List<Produto> produtosList) {
         this.data = data;
         this.valorTotal = valorTotal;
+        this.fornecedoresList = fornecedoresList;
+        this.produtosList = produtosList;
+    }
+
+    public Fornecimento(List<Fornecedor> fornecedoresList, List<Produto> produtosList) {
         this.fornecedoresList = fornecedoresList;
         this.produtosList = produtosList;
     }
@@ -50,6 +64,8 @@ public class Fornecimento {
     public void setProdutosList(List<Produto> produtosList) {
         this.produtosList = produtosList;
     }
+
+
 
     @Override
     public String toString() {

@@ -67,6 +67,27 @@ public class DistribuidoraController {
         System.out.println("Estoque de produtos: ");
         System.out.println(produtosList);
 
+        Fornecedor fornecedor1 = new Fornecedor(192172,"ronaldonazario@gmail.com","Ronaldo Nazario");
+        Fornecedor fornecedor2 = new Fornecedor(27235454,"ivanperisic@gmail.com", "Ivan Perisic");
+        Fornecedor fornecedor3 = new Fornecedor(387383863,"robertomazini@gmail.com","Roberto Mazini");
+        List <Fornecedor> fornecedoresList = new ArrayList<>();
+        fornecedoresList.add(fornecedor1);
+        fornecedoresList.add(fornecedor2);
+        fornecedoresList.add(fornecedor3);
+        System.out.println();
+        Fornecimento fornecimento1 = new Fornecimento("03/11/2023",23532.4,fornecedor1,produto3);
+        Fornecimento fornecimento2 = new Fornecimento("04/11/2023",5390.90,fornecedor2,produto4);
+        List <Fornecimento> fornecimentosList = new ArrayList<>();
+        fornecimentosList.add(fornecimento1);
+        fornecimentosList.add(fornecimento2);
+        System.out.println();
+        System.out.println(produto3);
+        System.out.println(produto4);
+        System.out.println("Adiciona estoque: ");
+        produto3.adicionaEstoque();
+        produto4.adicionaEstoque();
+        System.out.println(produto3);
+        System.out.println(produto4);
 
     }
 }
