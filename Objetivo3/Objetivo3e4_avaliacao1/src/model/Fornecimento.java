@@ -8,7 +8,6 @@ public class Fornecimento {
     private double valorTotal;
     Fornecedor fornecedor;
     Produto produto;
-    List <Fornecedor> fornecedoresList = new ArrayList<>();
     List <Produto> produtosList = new ArrayList<>();
 
     public Fornecimento() {
@@ -21,17 +20,7 @@ public class Fornecimento {
         this.produto = produto;
     }
 
-    public Fornecimento(String data, double valorTotal, List<Fornecedor> fornecedoresList, List<Produto> produtosList) {
-        this.data = data;
-        this.valorTotal = valorTotal;
-        this.fornecedoresList = fornecedoresList;
-        this.produtosList = produtosList;
-    }
 
-    public Fornecimento(List<Fornecedor> fornecedoresList, List<Produto> produtosList) {
-        this.fornecedoresList = fornecedoresList;
-        this.produtosList = produtosList;
-    }
 
     public String getData() {
         return data;
@@ -49,13 +38,6 @@ public class Fornecimento {
         this.valorTotal = valorTotal;
     }
 
-    public List<Fornecedor> getFornecedoresList() {
-        return fornecedoresList;
-    }
-
-    public void setFornecedoresList(List<Fornecedor> fornecedoresList) {
-        this.fornecedoresList = fornecedoresList;
-    }
 
     public List<Produto> getProdutosList() {
         return produtosList;
@@ -66,14 +48,13 @@ public class Fornecimento {
     }
 
 
-
     @Override
     public String toString() {
         return "\nFornecimento{" +
                 "data='" + data + '\'' +
                 ", valorTotal=" + valorTotal +
-                ", fornecedoresList=" + fornecedoresList +
-                ", produtosList=" + produtosList +
+                ", fornecedor=" + fornecedor +
+                ", produto=" + produto +
                 '}';
     }
 }

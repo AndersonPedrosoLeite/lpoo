@@ -70,13 +70,9 @@ public class DistribuidoraController {
         Fornecedor fornecedor1 = new Fornecedor(192172,"ronaldonazario@gmail.com","Ronaldo Nazario");
         Fornecedor fornecedor2 = new Fornecedor(27235454,"ivanperisic@gmail.com", "Ivan Perisic");
         Fornecedor fornecedor3 = new Fornecedor(387383863,"robertomazini@gmail.com","Roberto Mazini");
-        List <Fornecedor> fornecedoresList = new ArrayList<>();
-        fornecedoresList.add(fornecedor1);
-        fornecedoresList.add(fornecedor2);
-        fornecedoresList.add(fornecedor3);
         System.out.println();
         Fornecimento fornecimento1 = new Fornecimento("03/11/2023",23532.4,fornecedor1,produto3);
-        Fornecimento fornecimento2 = new Fornecimento("04/11/2023",5390.90,fornecedor2,produto4);
+        Fornecimento fornecimento2 = new Fornecimento("04/11/2023",5390.90,fornecedor1,produto4);
         List <Fornecimento> fornecimentosList = new ArrayList<>();
         fornecimentosList.add(fornecimento1);
         fornecimentosList.add(fornecimento2);
@@ -88,6 +84,13 @@ public class DistribuidoraController {
         produto4.adicionaEstoque();
         System.out.println(produto3);
         System.out.println(produto4);
+        produtosList.add(produto3);
+        produtosList.add(produto4);
+        fornecimentosList.sort(Comparator.comparing(Fornecimento::getData));
+        System.out.println();
+        System.out.println("Listas de fornecimentos da semana: ");
+        System.out.println(fornecimentosList);
 
+        //Falta o custo total de cada fornecimento//
     }
 }
