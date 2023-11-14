@@ -13,7 +13,7 @@ public class Fornecedor {
         this.contato = contato;
         this.nome = nome;
     }
-
+    Produto produto;
     public int getCnpj() {
         return cnpj;
     }

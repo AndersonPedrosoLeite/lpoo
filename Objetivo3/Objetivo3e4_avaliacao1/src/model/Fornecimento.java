@@ -7,7 +7,7 @@ public class Fornecimento {
     private String data;
     private double valorTotal;
     Fornecedor fornecedor;
-    Produto produto;
+
     List <Produto> produtosList = new ArrayList<>();
 
     public Fornecimento() {
@@ -17,7 +17,6 @@ public class Fornecimento {
         this.data = data;
         this.valorTotal = valorTotal;
         this.fornecedor = fornecedor;
-        this.produto = produto;
     }
 
 
@@ -54,7 +53,6 @@ public class Fornecimento {
                 "data='" + data + '\'' +
                 ", valorTotal=" + valorTotal +
                 ", fornecedor=" + fornecedor +
-                ", produto=" + produto +
                 '}';
     }
 }

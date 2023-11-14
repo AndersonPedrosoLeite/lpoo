@@ -8,8 +8,8 @@ public class Produto {
     private String nome;
     private int quantidade;
     private double preco;
-    List <Item> itensList = new ArrayList<>();
 
+    Fornecedor fornecedor;
     public Produto() {
     }
 
@@ -18,7 +18,7 @@ public class Produto {
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
-        this.itensList = itensList;
+
     }
 
     public Produto(int codigo, String nome, int quantidade, double preco) {
@@ -62,13 +62,9 @@ public class Produto {
         this.preco = preco;
     }
 
-    public List<Item> getItensList() {
-        return itensList;
-    }
 
-    public void setItensList(List<Item> itensList) {
-        this.itensList = itensList;
-    }
+
+
 
     public void baixaEstoque() {
         try {
@@ -87,7 +83,6 @@ public class Produto {
                 ", nome='" + nome + '\'' +
                 ", quantidade=" + quantidade +
                 ", preco=" + preco +
-                ", itensList=" + itensList +
                 '}';
     }
 }
